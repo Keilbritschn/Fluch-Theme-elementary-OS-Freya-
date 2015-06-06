@@ -9,7 +9,7 @@ Important Things todo:
   - Scrollbar
   - remove Back/Forward-Buttons weird hover-background
   - remove all Button-hover-backgrounds of the header/titlebar
-  - Edit whole Darkmode (Idea: copy whole default gtk3 and just change color)
+  - Darkmode nearly done
  - In GTK2
   - Add a window-frame-border like in GTK3
   - Change the Buttons to the ones from GTK3
