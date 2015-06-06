@@ -5,12 +5,10 @@ So the biggest credit goes to Daniel Fore.
 
 Important Things todo:
  - In GTK3
-  - Bug in the "notebook tab" thing. Theres a small, black box on it.
   - Progressbar's
   - Scrollbar
   - remove Back/Forward-Buttons weird hover-background
   - remove all Button-hover-backgrounds of the header/titlebar
-  - remove white Spots of the Buttons (during hovering)
   - Edit whole Darkmode (Idea: copy whole default gtk3 and just change color)
  - In GTK2
   - Add a window-frame-border like in GTK3
