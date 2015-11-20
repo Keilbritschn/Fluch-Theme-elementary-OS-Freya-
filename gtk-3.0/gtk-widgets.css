@@ -256,7 +256,7 @@ GtkHandleBox .entry:backdrop,
 
     border: 1px solid alpha(#000, 0.3);
 
-                
+
     color: @insensitive_color;
 }
 
@@ -451,7 +451,7 @@ GtkHandleBox .entry:backdrop,
                                   shade (@selected_bg_color, 1.10),
                                   @selected_bg_color
                                   );
-                                  
+
     border: 1px solid shade (@selected_bg_color, 0.90);
     border-radius: 2.5px;
 
@@ -501,7 +501,7 @@ GtkHandleBox .entry:backdrop,
                                   shade (@success_color, 1.10),
                                   @success_color
                                   );
-                                  
+
     border: 1px solid shade (@success_color, 0.90);
 }
 
@@ -555,7 +555,7 @@ GtkHandleBox .entry:backdrop,
                                   shade (@bg_color, 1.10),
                                   shade (@bg_color, 0.88)
                                   );
-                        
+
     box-shadow: inset 0 0 0 1px alpha (shade (@bg_color, 1.60), 0.10),
                 inset 0 1px 0 0 alpha (shade (@bg_color, 1.60), 0.90),
                 inset 0 -1px 0 0 alpha (shade (@bg_color, 1.60), 0.30),
@@ -737,7 +737,7 @@ GtkComboBox.combobox-entry .button {
 
 .titlebar .button {
     color: shade (@textColorPrimary, 0.8);
-    border-color: alpha (#000, 0.1);
+    border-color: alpha (#000, 0.2);
     padding: 3;
     /* FIXME: causes problems with files pathbar */
     /*box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
@@ -1018,7 +1018,7 @@ GtkOverlay > .button:focus:active {
 /*****************
  * Color Chooser *
  *****************/
-  
+
 :selected GtkColorSwatch {
     box-shadow: none;
 }
@@ -1027,20 +1027,20 @@ GtkColorSwatch.color-dark {
     color: white;
     outline-color: rgba(0, 0, 0, 0.3);
 }
-    
+
 GtkColorSwatch.color-dark:backdrop {
     color: rgba(255, 255, 255, 0.3);
 }
-      
+
 GtkColorSwatch.color-light {
     color: black;
     outline-color: rgba(255, 255, 255, 0.5);
 }
-    
+
 GtkColorSwatch.color-light:backdrop {
     color: rgba(0, 0, 0, 0.3);
 }
-    
+
 GtkColorSwatch.top {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -1064,7 +1064,7 @@ GtkColorSwatch:last-child .overlay {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-    
+
 GtkColorSwatch:only-child,
 GtkColorSwatch:only-child .overlay {
     border-radius: 4px;
@@ -1075,14 +1075,14 @@ GtkColorSwatch:hover {
                             alpha (#fff, 0.7),
                             alpha (#fff, 0) 50%
                             );
-                            
+
     box-shadow: inset 0 0 alpha (#fff, 0.4);
 }
-    
+
 GtkColorSwatch:backdrop,
 GtkColorSwatch:backdrop:selected {
     background-image: none;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
 GtkColorSwatch:selected,
@@ -1101,11 +1101,11 @@ GtkColorEditor GtkColorSwatch:hover {
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1),
                 0 1px white;
 }
-      
+
 GtkColorEditor GtkColorSwatch:backdrop {
     box-shadow: none;
-}   
-      
+}
+
 GtkColorSwatch#add-color-button {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -1257,7 +1257,7 @@ GtkOverlay .linked .button:insensitive:last-child {
     background-clip: border-box;
     background-color: #ffffff;
 
-    border: 1px solid shade (@progress_row_trough_color, 0.70);
+    border: 1px solid shade (@progress_row_trough_color, 0.85);
 }
 
 .notebook.header {
@@ -1266,10 +1266,9 @@ GtkOverlay .linked .button:insensitive:last-child {
 }
 
 .dynamic-notebook .notebook.header {
-
     border-style: solid;
     border-width: 0 0 1px 0;
-    border-color: shade (@progress_row_trough_color, 1);
+    border-color: shade (@progress_row_trough_color, 0.85);
     border-radius: 0;
 }
 
@@ -1337,7 +1336,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 
     border-radius: 0;
     background-color: transparent;
-    border-color: @progress_row_trough_color;
+    border-color: shade (@progress_row_trough_color, 0.85);
     border-style: solid;
     border-width: 0px 1px 1px;
 }
@@ -1346,10 +1345,10 @@ GtkOverlay .linked .button:insensitive:last-child {
     padding: 6px;
     color: #ffffff;
     border-radius: 0;
-    background-color: alpha (@progress_row_trough_color, 0.5);
-    border-color: @progress_row_trough_color;
+    background-color: shade (@progress_row_trough_color, 1);
+    border-color: shade (@progress_row_trough_color, 0.85);
     border-style: solid;
-    border-width: 0px 1px 1px;
+    border-width: 0px 1px;
 }
 
 .dynamic-notebook .notebook tab > GtkImage {
@@ -1358,7 +1357,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .dynamic-notebook .notebook tab:nth-child(first) {
     border-width: 0px 1px 1px;
-    border-color: @progress_row_trough_color;
+    border-color: shade (@progress_row_trough_color, 0.85);
 }
 
 
@@ -1386,7 +1385,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .notebook.header {
     border: none;
-    background-color: transparent;
+    background-color: #ffffff;
 }
 
 .notebook {
@@ -1437,7 +1436,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .notebook tab GtkLabel {
     color: alpha(@text_color, 0.75);
-    
+
 
     font: 9.5;
 }
@@ -2487,6 +2486,8 @@ GtkListBox,
     background-color: shade (#141414, 1);
     color: shade (#fff, 0.9);
     -gtk-icon-style: regular;
+    padding-top: 4;
+    padding-bottom: 4;
 }
 
 .sidebar .separator {
@@ -2496,7 +2497,7 @@ GtkListBox,
 GtkDialog .sidebar,
 GtkDialog .sidebar .view,
 GtkDialog .sidebar GtkScrolledWindow {
-    background-color: shade (@titlebar_color, 1.07);
+    background-color: shade (#141414, 0.9);
 }
 
 .sidebar,
@@ -2531,7 +2532,6 @@ GtkDialog .sidebar GtkScrolledWindow {
 .source-list.view:selected:focus,
 .source-list.category-expander:hover {
     color: shade (@titlebar_color, 1);
-
 
     background-color: @main_color_strong;
 }
@@ -2847,7 +2847,7 @@ GraniteWidgetsPopOver * {
 
 GraniteWidgetsPopOver .button {
     background-image: none;
-    background-color: transparent;    
+    background-color: transparent;
 }
 
 GraniteWidgetsPopOver .button:active,
@@ -2939,7 +2939,7 @@ GtkModelButton.button:selected {
 .popover .action-bar {
     background-image: none;
     padding: 6px;
-    border-color: shade(@base_color, 0.8); 
+    border-color: shade(@base_color, 0.8);
 }
 
 .popover .action-bar .button {
@@ -2971,7 +2971,7 @@ GcrCertificateWidget .frame {
     background-color: shade (@base_color, 1.0);
     border-color: @progress_row_trough_color;
 
-    
+
     -gtk-image-effect: dim;
 }
 
