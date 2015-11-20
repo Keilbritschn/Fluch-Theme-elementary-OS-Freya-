@@ -19,15 +19,15 @@
 <!-- :: GEOMETRIES :: -->
 
 <frame_geometry name="normal" rounded_top_left="4" rounded_top_right="4">
-	<distance name="left_titlebar_edge" value="5"/>
-	<distance name="right_titlebar_edge" value="5"/>
-	<distance name="title_vertical_pad" value="0"/>
-	<aspect_ratio name="button" value="1.0"/>
-	<border name="title_border" left="10" right="3" top="7" bottom="3"/>
-	<border name="button_border" left="2" right="2" top="5" bottom="5"/>
-	<distance name="left_width" value="0"/>
-	<distance name="right_width" value="0"/>
-	<distance name="bottom_height" value="0"/>
+  <distance name="left_width" value="1"/>
+  <distance name="right_width" value="1"/>
+  <distance name="bottom_height" value="1"/>
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <distance name="title_vertical_pad" value="8"/>
+  <aspect_ratio name="button" value="1.0"/>
+  <border name="title_border" left="10" right="10" top="7" bottom="3"/>
+  <border name="button_border" left="2" right="2" top="5" bottom="1"/>
 </frame_geometry>
 
 <frame_geometry name="max" parent="normal" rounded_top_left="4" rounded_top_right="4">
@@ -61,20 +61,23 @@
 <!-- ::: BORDER OUTLINE ::: -->
 
 <draw_ops name="border_focused">
-	<rectangle color="#FFFFFF" x="0" y="0" width="width-1" height="height-1" filled="false" />
+	<rectangle color="#ABABAB" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
 
 <draw_ops name="border_unfocused">
-	<rectangle color="#FFFFFF" x="0" y="0" width="width-1" height="height-1" filled="false" />
+	<rectangle color="#ABABAB" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
 
 <draw_ops name="rounded_border">
-	<line color="#FFFFFF" x1="4" y1="0" x2="width-5" y2="0" />
-	<line color="#FFFFFF" x1="0" y1="height-1" x2="width-1" y2="height-1" />
-	<line color="#FFFFFF" x1="0" y1="4" x2="0" y2="height-2" />
-	<line color="#FFFFFF" x1="width-1" y1="4" x2="width-1" y2="height-2" />
-	<arc color="#FFFFFF" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
-	<arc color="#FFFFFF" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
+	<line color="#ABABAB" x1="4" y1="0" x2="width-5" y2="0" />
+	<line color="#ABABAB" x1="0" y1="height-1" x2="width-1" y2="height-1" />
+	<line color="#ABABAB" x1="0" y1="4" x2="0" y2="height-2" />
+	<line color="#ABABAB" x1="width-1" y1="4" x2="width-1" y2="height-2" />
+	<arc color="#ABABAB" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
+	<arc color="#ABABAB" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
+	<!-- double arcs for darker borders -->
+	<arc color="#ABABAB" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
+	<arc color="#ABABAB" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
@@ -88,28 +91,28 @@
 	<line
 		x1="width" y1="0"
 		x2="width" y2="height"
-		color="C_border_focused" />
+		color="#ffffff" />
 </draw_ops>
 
 <draw_ops name="border_right_unfocused">
 	<line
-		x1="width" y1="0" 
-		x2="width" y2="height" 
-		color="C_border_focused" />
+		x1="width" y1="0"
+		x2="width" y2="height"
+		color="#ffffff" />
 </draw_ops>
 
 <draw_ops name="border_left_focused">
 	<line
-		x1="0" y1="0" 
-		x2="0" y2="height" 
-		color="C_border_focused" />
+		x1="0" y1="0"
+		x2="0" y2="height"
+		color="#ffffff" />
 </draw_ops>
 
 <draw_ops name="border_left_unfocused">
 	<line
-		x1="0" y1="0" 
-		x2="0" y2="height" 
-		color="C_border_focused" />
+		x1="0" y1="0"
+		x2="0" y2="height"
+		color="#ffffff" />
 </draw_ops>
 
 <!-- ::: TITLES ::: -->
@@ -129,7 +132,7 @@
 <draw_ops name="entire_background_focused">
 	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 
-</draw_ops> 
+</draw_ops>
 
 <draw_ops name="entire_background_unfocused">
 	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
