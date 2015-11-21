@@ -1,4 +1,5 @@
-# elementaryOS-Fluch-theme
+## Fluch
+# GTK-Theme for elementary OS Freya
 A small, unfinished theme for elementary OS.
 Its based on the default theme of elementaryOS.
 So the biggest credit goes to Daniel Fore.
